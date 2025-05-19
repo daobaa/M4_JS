@@ -1,3 +1,4 @@
+// Use of DOM because the script is placed inside the <head>
 document.addEventListener("DOMContentLoaded", function (){
     // Checkbox Toggle
     const pswInput = document.getElementById("psw");
@@ -91,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function (){
         const nomParent = nomMessage.parentNode;
         const passwdParent = passwdMessage.parentNode;
         
+        // If all requirements are met it removes the html that displays the requirements
         if(Uppercase && Lowercase && Number && Minimum === true){
             nomMessage.remove();
             passwdMessage.remove();

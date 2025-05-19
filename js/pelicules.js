@@ -1,8 +1,10 @@
+// Importing films from the JS file
 import {films} from '../JSON/infopelis.js';
 
 let container;
 let renderFilms
 
+// Use of DOM because the script is placed inside the <head>
 document.addEventListener("DOMContentLoaded", function (){
     const fullContainer = document.getElementById("film-container");
 
@@ -10,9 +12,11 @@ document.addEventListener("DOMContentLoaded", function (){
     container.classList.add("container");
     fullContainer.append(container);
 
+    // Function on declared variable to admit later filtered inputs
     renderFilms = function (filmsToShow) {
         container.innerHTML = "";
 
+        // Iteration to display all films info
         filmsToShow.forEach(film => {
             let card = document.createElement("div");
             card.classList.add("card");
@@ -41,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function (){
     renderFilms(films);
 });
 
+// Whenever the button is clicked the function reads the input and calls to renderFilms to diplay the cards
 window.funcio = function() {
     const inputCerca = document.getElementById("cerca");
     const query = inputCerca.value.trim().toLowerCase();
