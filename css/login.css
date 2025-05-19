@@ -1,0 +1,48 @@
+input[type=submit]  {
+    background-color: #04AA6D;
+    color: white;
+}
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+#message_nom {
+    display:block;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 10px 10px 10px 50px;
+    margin-top: 5px;
+}
+#message_nom p {
+    padding: 5px 25px;
+    font-size: 18px;
+}
+#message_passwd {
+    display:block;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 10px 10px 10px 50px;
+    margin-top: 5px;
+}
+#message_passwd p {
+    padding: 5px 25px;
+    font-size: 18px;
+}
+.valid {
+    color: green;
+}
+.valid:before {
+    position: relative;
+    left: -20px;
+    content: "✔";
+}
+.invalid {
+    color: red;
+}
+.invalid:before {
+    position: relative;
+    left: -20px;
+    content: "✖";
+}

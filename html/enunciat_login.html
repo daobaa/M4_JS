@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/login.css">
+  <script src="../js/login.js" defer></script>
+  <title>Log In</title>
+</head>
+<body>
+<h3>Validació contrasenya</h3>
+
+<form action="enunciat_pelicules.html">
+  <div class="container">
+      <label for="usrname">Nom</label><br>
+      <input type="text" id="usrname" name="usrname" title="Ha de tenir una @" required required><br><br>
+
+      <label for="psw">Contrasenya</label><br>
+      <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Ha de tenir una minúscula, una majúscula, un número i almenys vuit caràcters" required>
+      <br><br>
+      <input type="checkbox" id="mostrar">Mostrar contrasenya
+  </div>      
+
+  <div id="message_nom">
+      <h3>El nom ha de tenir:</h3>
+      <p id="arroba" class="invalid">Una @</p>    
+  </div>
+
+  <div id="message_passwd">
+      <h3>La contrasenya ha de tenir:</h3>
+      <p id="letter" class="invalid">Una lletra <b>minúscula</b></p>
+      <p id="capital" class="invalid">Una lletra <b>majúscula</b></p>
+      <p id="number" class="invalid">Un <b>número</b></p>
+      <p id="length" class="invalid">Mínim <b>8 caràcters</b></p>
+  </div>
+  
+  <br><br><input type="submit" value="Enviar" id="botonSubmit">
+</form>
+</body>
+</html>
